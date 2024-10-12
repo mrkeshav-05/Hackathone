@@ -3,7 +3,6 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { generateAccessToken } from '../utils/tokens/generateAccessToken.js';
 import { generateRefreshToken } from '../utils/tokens/generateRefreshToken.js';
-import { generateEmailVerificationToken } from '../utils/tokens/generateEmailVerificationToken.js';
 
 const artistSchema = new mongoose.Schema({
   artistName: {
@@ -63,4 +62,4 @@ artistSchema.methods.generateEmailVarificationToken = async function () {
 }
 
 
-export const Customer = mongoose.model('Customer', artistSchema);
+export const Artist = mongoose.model('Artist', artistSchema);
