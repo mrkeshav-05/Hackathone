@@ -19,24 +19,13 @@ app.use(express.static('public'));
 
 app.use(cookieParser());
 
-// app.use(bodyParser.json());
-
-// app.use(bodyParser.urlencoded({extended: true, limit: "16kb"}));
 
 
-// import customerRouter from './routes/customer.routes.js';
-// import serviceProviderRouter from './routes/serviceProvider.routes.js';
-// import serviceRouter from './routes/service.routes.js';
-// import review from './routes/review.routes.js';
-// // Routes
-// // This is the route for the user
+import customerRouter from './routes/customer.routes.js';
 
-// app.use('/api/auth/customer', customerRouter);
-// app.use('/api/auth/serviceProvider', serviceProviderRouter);
-// app.use('/api/auth/service', serviceRouter);
-// app.use('/api/review', review);
-// routes decaleration
-// This is the route for the video
+
+app.use('/api/auth/customer', customerRouter);
+
 
 // http://localhost:8000/api/auth/register
 

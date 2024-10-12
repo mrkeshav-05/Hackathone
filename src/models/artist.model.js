@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { generateAccessToken } from '../utils/tokens/generateAccessToken.js';
-import { generateRefreshToken } from '../utils/tokens/generateRefreshToke.js';
+import { generateRefreshToken } from '../utils/tokens/generateRefreshToken.js';
 import { generateEmailVerificationToken } from '../utils/tokens/generateEmailVerificationToken.js';
 
 const artistSchema = new mongoose.Schema({

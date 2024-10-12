@@ -2,8 +2,8 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { generateAccessToken } from '../utils/tokens/generateAccessToken.js';
-import { generateRefreshToken } from '../utils/tokens/generateRefreshToke.js';
-import { generateEmailVerificationToken } from '../utils/tokens/generateEmailVerificationToken.js';
+import { generateRefreshToken } from '../utils/tokens/generateRefreshToken.js';
+
 
 const customerSchema = new mongoose.Schema({
   username: {
@@ -31,7 +31,10 @@ const customerSchema = new mongoose.Schema({
     {
       type: String
     }
-  ]
+  ],
+  refreshToken: {
+    type: String,
+  }
 }, { timestamps: true });
 
 
