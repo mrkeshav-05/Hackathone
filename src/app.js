@@ -1,0 +1,43 @@
+import express from 'express';
+import cors from 'cors';
+
+
+import cookieParser from 'cookie-parser';
+// import bodyParser from 'body-parser';
+const app = express();
+
+app.use(cors ({
+  origin: 'http://localhost:3000',
+  credentials: true
+}));
+
+app.use(express.json({limit: "16kb"}));
+
+app.use(express.urlencoded({extended: true, limit: "16kb"}));
+
+app.use(express.static('public'));
+
+app.use(cookieParser());
+
+// app.use(bodyParser.json());
+
+// app.use(bodyParser.urlencoded({extended: true, limit: "16kb"}));
+
+
+// import customerRouter from './routes/customer.routes.js';
+// import serviceProviderRouter from './routes/serviceProvider.routes.js';
+// import serviceRouter from './routes/service.routes.js';
+// import review from './routes/review.routes.js';
+// // Routes
+// // This is the route for the user
+
+// app.use('/api/auth/customer', customerRouter);
+// app.use('/api/auth/serviceProvider', serviceProviderRouter);
+// app.use('/api/auth/service', serviceRouter);
+// app.use('/api/review', review);
+// routes decaleration
+// This is the route for the video
+
+// http://localhost:8000/api/auth/register
+
+export { app };
