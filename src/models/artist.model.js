@@ -33,7 +33,12 @@ const artistSchema = new mongoose.Schema({
     {
       type: String
     }
-  ]
+  ],
+  refreshToken: {
+    type: String,
+  }
+  // valit address , watct time
+  
 }, { timestamps: true });
 
 
