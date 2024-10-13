@@ -34,6 +34,9 @@ const artistSchema = new mongoose.Schema({
       type: String
     }
   ],
+  walletAddress: {
+    type: String,
+  },
   refreshToken: {
     type: String,
   }

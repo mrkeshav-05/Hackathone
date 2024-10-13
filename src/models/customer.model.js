@@ -32,6 +32,14 @@ const customerSchema = new mongoose.Schema({
       type: String
     }
   ],
+  subscriptionStatus: {
+    type: String,
+    enum: ["active", "inactive"],
+    default: "inactive"
+  },
+  subscriptionDate: {
+    type: Date,
+  },
   refreshToken: {
     type: String,
   }
